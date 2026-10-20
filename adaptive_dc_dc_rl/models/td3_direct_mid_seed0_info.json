@@ -1,0 +1,217 @@
+{
+  "model": "/Users/reththika_murugadasan/cs/adaptive_dc_dc_rl/models/td3_direct_mid_seed0.zip",
+  "total_timesteps": 50000,
+  "seed": 0,
+  "learning_starts": 5000,
+  "wall_time_s": 80.6,
+  "action_mapping": "a in [-1,1] -> D = 0.05 + (a+1)/2*0.90",
+  "extra_info": {},
+  "env": "BoostConverterEnv",
+  "obs_shape": [
+    5
+  ],
+  "action_shape": [
+    1
+  ],
+  "hyperparameters": {
+    "ENV_CONTROL_STEPS": 4,
+    "ENV_MAX_STEPS": 400,
+    "ENV_VIN_RANGE": [
+      10.0,
+      14.0
+    ],
+    "ENV_R_RANGE": [
+      10.0,
+      30.0
+    ],
+    "ENV_VREF_RANGE": [
+      20.0,
+      28.0
+    ],
+    "ENV_COMPONENT_TOL": 0.0,
+    "ENV_DISTURBANCE_PROB": 0.5,
+    "ENV_DISTURBANCE_WINDOW": [
+      0.25,
+      0.6
+    ],
+    "ENV_DISTURBANCE_KINDS": [
+      "vin",
+      "load",
+      "both"
+    ],
+    "ENV_DISTURBANCE_VIN_DELTA": [
+      1.0,
+      4.0
+    ],
+    "ENV_DISTURBANCE_LOAD_RATIO": [
+      0.5,
+      2.0
+    ],
+    "ENV_DISTURBANCE_VREF_DELTA": [
+      1.0,
+      4.0
+    ],
+    "ENV_INIT_PROBS": {
+      "cold": 0.25,
+      "precharged": 0.25,
+      "equilibrium": 0.5
+    },
+    "ENV_E_SCALE": 10.0,
+    "ENV_DE_SCALE": 1.0,
+    "ENV_INT_SCALE": 0.1,
+    "ENV_INT_CLIP": 0.2,
+    "ENV_V_SCALE": 24.0,
+    "ENV_I_SCALE": 10.0,
+    "ENV_OBS_CLIP": 5.0,
+    "ENV_V_MAX": 60.0,
+    "ENV_I_MAX": 30.0,
+    "ENV_REWARD": {
+      "w_lin": 0.5,
+      "w_sqrt": 0.5,
+      "w_over": 0.5,
+      "w_duty": 0.05,
+      "duty_scale": 0.05,
+      "w_de": 0.05,
+      "w_cur": 1.0,
+      "i_soft": 12.0,
+      "w_prec": 0.5,
+      "prec_sigma": [
+        0.5,
+        0.1
+      ],
+      "alive": 1.0,
+      "fail_penalty": 50.0
+    },
+    "TD3_MODEL_NAME": "td3_boost",
+    "TD3_TOTAL_TIMESTEPS": 200000,
+    "TD3_SEED": 0,
+    "TD3_NET_ARCH": [
+      64,
+      64
+    ],
+    "TD3_LEARNING_RATE": 0.001,
+    "TD3_BUFFER_SIZE": 200000,
+    "TD3_BATCH_SIZE": 256,
+    "TD3_GAMMA": 0.99,
+    "TD3_TAU": 0.005,
+    "TD3_POLICY_DELAY": 2,
+    "TD3_TARGET_POLICY_NOISE": 0.2,
+    "TD3_TARGET_NOISE_CLIP": 0.5,
+    "TD3_EXPLORATION_SIGMA": 0.1,
+    "TD3_LEARNING_STARTS": 5000,
+    "TD3_TRAIN_FREQ": 1,
+    "TD3_GRADIENT_STEPS": 1,
+    "TD3_LOG_EPISODES": 20
+  },
+  "versions": {
+    "stable_baselines3": "2.9.0",
+    "torch": "2.14.1",
+    "numpy": "2.5.3"
+  },
+  "reward_history": [
+    {
+      "timesteps": 5905,
+      "episodes": 20,
+      "return_mean": 10.859872169603745,
+      "return_std": 110.2077748514427,
+      "return_min": -262.49353904430745,
+      "return_max": 230.73455554555866,
+      "length_mean": 295.25,
+      "failures_total": 6,
+      "err": -151.13961754639752,
+      "over": -46.702355539203126,
+      "duty": -68.55018849427327,
+      "de": -6.892942917822515,
+      "cur": -2.731977670752978,
+      "prec": 6.926954338053166,
+      "alive": 294.95
+    },
+    {
+      "timesteps": 13905,
+      "episodes": 40,
+      "return_mean": 283.0240791783207,
+      "return_std": 100.66069267998695,
+      "return_min": 31.48703194708934,
+      "return_max": 378.84850918727716,
+      "length_mean": 400.0,
+      "failures_total": 6,
+      "err": -114.06577895453684,
+      "over": -13.44058183085634,
+      "duty": -13.281629364523516,
+      "de": -4.010483487910306,
+      "cur": -0.023469579332630813,
+      "prec": 27.84602239548022,
+      "alive": 400.0
+    },
+    {
+      "timesteps": 21905,
+      "episodes": 60,
+      "return_mean": 346.6889603318324,
+      "return_std": 44.36955068864995,
+      "return_min": 260.2989548538457,
+      "return_max": 438.3592384237386,
+      "length_mean": 400.0,
+      "failures_total": 6,
+      "err": -68.17721686637415,
+      "over": -6.1997468475798865,
+      "duty": -20.531832012798013,
+      "de": -2.658944790985708,
+      "cur": 0.0,
+      "prec": 44.256700849570194,
+      "alive": 400.0
+    },
+    {
+      "timesteps": 29905,
+      "episodes": 80,
+      "return_mean": 390.29857913562347,
+      "return_std": 47.22907099149893,
+      "return_min": 307.8908784228302,
+      "return_max": 489.71650420116396,
+      "length_mean": 400.0,
+      "failures_total": 6,
+      "err": -48.86798777472285,
+      "over": -4.181188541621394,
+      "duty": -24.722825404404162,
+      "de": -2.6398454391841666,
+      "cur": 0.0,
+      "prec": 70.71042629555592,
+      "alive": 400.0
+    },
+    {
+      "timesteps": 37905,
+      "episodes": 100,
+      "return_mean": 411.25276472921723,
+      "return_std": 58.03244799621613,
+      "return_min": 289.95496680122415,
+      "return_max": 504.3020366640646,
+      "length_mean": 400.0,
+      "failures_total": 6,
+      "err": -42.15223542244099,
+      "over": -2.110880701770639,
+      "duty": -25.965909339522188,
+      "de": -2.2291486194377748,
+      "cur": 0.0,
+      "prec": 83.71093881238883,
+      "alive": 400.0
+    },
+    {
+      "timesteps": 45905,
+      "episodes": 120,
+      "return_mean": 429.4713848074066,
+      "return_std": 59.931985792381454,
+      "return_min": 260.7088349771383,
+      "return_max": 516.1500674713975,
+      "length_mean": 400.0,
+      "failures_total": 6,
+      "err": -38.81032861035859,
+      "over": -2.4803244041274635,
+      "duty": -30.28096105654256,
+      "de": -2.718520775373519,
+      "cur": 0.0,
+      "prec": 103.76151965380866,
+      "alive": 400.0
+    }
+  ],
+  "episodes": 130,
+  "trips": 6
+}

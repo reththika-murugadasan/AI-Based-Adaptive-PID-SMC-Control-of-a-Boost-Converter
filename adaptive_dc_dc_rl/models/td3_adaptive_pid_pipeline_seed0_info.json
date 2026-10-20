@@ -1,0 +1,168 @@
+{
+  "model": "/Users/reththika_murugadasan/cs/adaptive_dc_dc_rl/models/td3_adaptive_pid_pipeline_seed0.zip",
+  "total_timesteps": 2000,
+  "seed": 0,
+  "learning_starts": 500,
+  "wall_time_s": 3.2,
+  "action_mapping": "see extra_info",
+  "extra_info": {
+    "ADAPT_CERTIFIED_FACTORS": {
+      "Kp": [
+        0.7,
+        1.5
+      ],
+      "Ki": [
+        0.7,
+        1.05
+      ],
+      "Kd": [
+        0.9,
+        1.2
+      ]
+    },
+    "ADAPT_RANGE_FACTORS": {
+      "Kp": [
+        0.7,
+        1.5
+      ],
+      "Ki": [
+        0.7,
+        1.05
+      ],
+      "Kd": [
+        0.9,
+        1.2
+      ]
+    },
+    "ADAPT_KP_RANGE": [
+      0.00344078,
+      0.0073731000000000005
+    ],
+    "ADAPT_KI_RANGE": [
+      4.689579999999999,
+      7.03437
+    ],
+    "ADAPT_KD_RANGE": [
+      2.46276e-05,
+      3.28368e-05
+    ],
+    "ADAPT_SMOOTH_ALPHA": 0.1,
+    "ADAPT_RATE_LIMIT": 0.05,
+    "ADAPT_W_GAIN": 0.02,
+    "ADAPT_RECOVERY_ENABLED": true,
+    "ADAPT_REC_ERR_THR": 2.5,
+    "ADAPT_REC_ERR_TAU": 0.002,
+    "ADAPT_REC_PERSIST": 0.008,
+    "ADAPT_REC_IL_WARN": 12.0,
+    "ADAPT_REC_V_WARN_RATIO": 1.15,
+    "ADAPT_REC_MIN_HOLD": 0.005,
+    "ADAPT_REC_RELEASE_THR": 1.0,
+    "ADAPT_REC_RELEASE_HOLD": 0.005,
+    "ADAPT_MODEL_NAME": "td3_adaptive_pid"
+  },
+  "env": "AdaptivePIDEnv",
+  "obs_shape": [
+    10
+  ],
+  "action_shape": [
+    3
+  ],
+  "hyperparameters": {
+    "ENV_CONTROL_STEPS": 4,
+    "ENV_MAX_STEPS": 400,
+    "ENV_VIN_RANGE": [
+      10.0,
+      14.0
+    ],
+    "ENV_R_RANGE": [
+      10.0,
+      30.0
+    ],
+    "ENV_VREF_RANGE": [
+      20.0,
+      28.0
+    ],
+    "ENV_COMPONENT_TOL": 0.0,
+    "ENV_DISTURBANCE_PROB": 0.5,
+    "ENV_DISTURBANCE_WINDOW": [
+      0.25,
+      0.6
+    ],
+    "ENV_DISTURBANCE_KINDS": [
+      "vin",
+      "load",
+      "both"
+    ],
+    "ENV_DISTURBANCE_VIN_DELTA": [
+      1.0,
+      4.0
+    ],
+    "ENV_DISTURBANCE_LOAD_RATIO": [
+      0.5,
+      2.0
+    ],
+    "ENV_DISTURBANCE_VREF_DELTA": [
+      1.0,
+      4.0
+    ],
+    "ENV_INIT_PROBS": {
+      "cold": 0.25,
+      "precharged": 0.25,
+      "equilibrium": 0.5
+    },
+    "ENV_E_SCALE": 10.0,
+    "ENV_DE_SCALE": 1.0,
+    "ENV_INT_SCALE": 0.1,
+    "ENV_INT_CLIP": 0.2,
+    "ENV_V_SCALE": 24.0,
+    "ENV_I_SCALE": 10.0,
+    "ENV_OBS_CLIP": 5.0,
+    "ENV_V_MAX": 60.0,
+    "ENV_I_MAX": 30.0,
+    "ENV_REWARD": {
+      "w_lin": 0.5,
+      "w_sqrt": 0.5,
+      "w_over": 0.5,
+      "w_duty": 0.05,
+      "duty_scale": 0.05,
+      "w_de": 0.05,
+      "w_cur": 1.0,
+      "i_soft": 12.0,
+      "w_prec": 0.5,
+      "prec_sigma": [
+        0.5,
+        0.1
+      ],
+      "alive": 1.0,
+      "fail_penalty": 50.0
+    },
+    "TD3_MODEL_NAME": "td3_boost",
+    "TD3_TOTAL_TIMESTEPS": 200000,
+    "TD3_SEED": 0,
+    "TD3_NET_ARCH": [
+      64,
+      64
+    ],
+    "TD3_LEARNING_RATE": 0.001,
+    "TD3_BUFFER_SIZE": 200000,
+    "TD3_BATCH_SIZE": 256,
+    "TD3_GAMMA": 0.99,
+    "TD3_TAU": 0.005,
+    "TD3_POLICY_DELAY": 2,
+    "TD3_TARGET_POLICY_NOISE": 0.2,
+    "TD3_TARGET_NOISE_CLIP": 0.5,
+    "TD3_EXPLORATION_SIGMA": 0.1,
+    "TD3_LEARNING_STARTS": 5000,
+    "TD3_TRAIN_FREQ": 1,
+    "TD3_GRADIENT_STEPS": 1,
+    "TD3_LOG_EPISODES": 20
+  },
+  "versions": {
+    "stable_baselines3": "2.9.0",
+    "torch": "2.14.1",
+    "numpy": "2.5.3"
+  },
+  "reward_history": [],
+  "episodes": 5,
+  "trips": 0
+}

@@ -1,0 +1,77 @@
+{
+  "model": "/Users/reththika_murugadasan/cs/adaptive_dc_dc_rl/models/td3_adaptive_pid_smoke.zip",
+  "total_timesteps": 5000,
+  "seed": 0,
+  "learning_starts": 1250,
+  "wall_time_s": 7.2,
+  "action_mapping": "see extra_info",
+  "extra_info": {
+    "ADAPT_RANGE_FACTORS": {
+      "Kp": [
+        0.25,
+        2.0
+      ],
+      "Ki": [
+        0.25,
+        1.0
+      ],
+      "Kd": [
+        0.8,
+        1.5
+      ]
+    },
+    "ADAPT_KP_RANGE": [
+      0.00122885,
+      0.0098308
+    ],
+    "ADAPT_KI_RANGE": [
+      1.67485,
+      6.6994
+    ],
+    "ADAPT_KD_RANGE": [
+      2.18912e-05,
+      4.1046e-05
+    ],
+    "ADAPT_SMOOTH_ALPHA": 0.1,
+    "ADAPT_RATE_LIMIT": 0.05,
+    "ADAPT_W_GAIN": 0.02,
+    "ADAPT_MODEL_NAME": "td3_adaptive_pid"
+  },
+  "env": "AdaptivePIDEnv",
+  "obs_shape": [
+    9
+  ],
+  "action_shape": [
+    3
+  ],
+  "hyperparameters": {
+    "TD3_MODEL_NAME": "td3_boost",
+    "TD3_TOTAL_TIMESTEPS": 200000,
+    "TD3_SEED": 0,
+    "TD3_NET_ARCH": [
+      64,
+      64
+    ],
+    "TD3_LEARNING_RATE": 0.001,
+    "TD3_BUFFER_SIZE": 200000,
+    "TD3_BATCH_SIZE": 256,
+    "TD3_GAMMA": 0.99,
+    "TD3_TAU": 0.005,
+    "TD3_POLICY_DELAY": 2,
+    "TD3_TARGET_POLICY_NOISE": 0.2,
+    "TD3_TARGET_NOISE_CLIP": 0.5,
+    "TD3_EXPLORATION_SIGMA": 0.1,
+    "TD3_LEARNING_STARTS": 5000,
+    "TD3_TRAIN_FREQ": 1,
+    "TD3_GRADIENT_STEPS": 1,
+    "TD3_LOG_EPISODES": 20
+  },
+  "versions": {
+    "stable_baselines3": "2.9.0",
+    "torch": "2.14.1",
+    "numpy": "2.5.3"
+  },
+  "reward_history": [],
+  "episodes": 12,
+  "trips": 0
+}

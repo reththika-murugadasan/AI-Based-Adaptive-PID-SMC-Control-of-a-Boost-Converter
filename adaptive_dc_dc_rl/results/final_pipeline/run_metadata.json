@@ -1,0 +1,73 @@
+{
+  "tag": "pipeline",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "t_dist": 0.15,
+  "t_end": 0.3,
+  "scenarios": [
+    "nominal",
+    "vin_12_to_10",
+    "vin_12_to_14",
+    "load_20_to_10",
+    "load_20_to_30"
+  ],
+  "models": {
+    "direct_td3_seed0": {
+      "file": "td3_direct_pipeline_seed0.zip",
+      "sha256": "4b3524ba39b3dd6074ef01591b40897c01285ef5b2d0a7697db49b888e34d518"
+    },
+    "direct_td3_seed1": {
+      "file": "td3_direct_pipeline_seed1.zip",
+      "sha256": "5117a444aee815781d8e64021f2ab03157d59c5a327f343d315586ce253d206c"
+    },
+    "direct_td3_seed2": {
+      "file": "td3_direct_pipeline_seed2.zip",
+      "sha256": "4bf8589e2b56bb35fe20778026f7a70f5ce2faf5ade1ff30decf3cb4271e2417"
+    },
+    "adaptive_pid_seed0": {
+      "file": "td3_adaptive_pid_pipeline_seed0.zip",
+      "sha256": "844e7ff0e4a705431286ca82d2d394595c343c17edcc1f57d1cd7fbde314bd7b"
+    },
+    "adaptive_pid_seed1": {
+      "file": "td3_adaptive_pid_pipeline_seed1.zip",
+      "sha256": "2de4d87026a856624112854e1699c353739783db6ddac4c69f21a1c11a05c485"
+    },
+    "adaptive_pid_seed2": {
+      "file": "td3_adaptive_pid_pipeline_seed2.zip",
+      "sha256": "79a8858fd9fc31206eea94175d38ac522cee5a66d5498e2d67f592bd6321dd8b"
+    },
+    "adaptive_smc_seed0": {
+      "file": "td3_adaptive_smc_pipeline_seed0.zip",
+      "sha256": "875640d34c7691857a96430b27f3cf99fb4034a0fd59a0800da5172c34580977"
+    },
+    "adaptive_smc_seed1": {
+      "file": "td3_adaptive_smc_pipeline_seed1.zip",
+      "sha256": "a268438a96afdccdf535544463b1693c44753486940982f2b6bf690f45791fbd"
+    },
+    "adaptive_smc_seed2": {
+      "file": "td3_adaptive_smc_pipeline_seed2.zip",
+      "sha256": "36258d3e96455e0a750b490180962e3caf863665f2832f0d5af3c99826748dcc"
+    }
+  },
+  "baselines": {
+    "pid": [
+      0.0049154,
+      6.6994,
+      2.7364e-05
+    ],
+    "smc": [
+      0.65641,
+      164.74,
+      0.3,
+      0.8
+    ]
+  },
+  "versions": {
+    "stable_baselines3": "2.9.0",
+    "torch": "2.14.1",
+    "numpy": "2.5.3"
+  }
+}

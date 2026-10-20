@@ -1,0 +1,73 @@
+{
+  "tag": "final",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "t_dist": 0.15,
+  "t_end": 0.3,
+  "scenarios": [
+    "nominal",
+    "vin_12_to_10",
+    "vin_12_to_14",
+    "load_20_to_10",
+    "load_20_to_30"
+  ],
+  "models": {
+    "direct_td3_seed0": {
+      "file": "td3_direct_final_seed0.zip",
+      "sha256": "96104fd280f2f4d982dc5f1143ffa1f21b29d93d277cf21f74436299c8af0b82"
+    },
+    "direct_td3_seed1": {
+      "file": "td3_direct_final_seed1.zip",
+      "sha256": "99ed170556e2d087d47a32894a549f1744de954ad11cd47cc059da45427153f4"
+    },
+    "direct_td3_seed2": {
+      "file": "td3_direct_final_seed2.zip",
+      "sha256": "080b9c00660082e89e68bc17592eec0a618d62486059d0f8f49989d86e17a244"
+    },
+    "adaptive_pid_seed0": {
+      "file": "td3_adaptive_pid_final_seed0.zip",
+      "sha256": "8b9e3540e1a52c677367e0e09f635402bdde6dab2b1c632831eda3bfd24ef56d"
+    },
+    "adaptive_pid_seed1": {
+      "file": "td3_adaptive_pid_final_seed1.zip",
+      "sha256": "736b76c99ca8a9a52ab472e243171bfb262206247a02227783b9668f0867da87"
+    },
+    "adaptive_pid_seed2": {
+      "file": "td3_adaptive_pid_final_seed2.zip",
+      "sha256": "adacf1f7c959277bcfb7c5009bd49e01cfa277dff02aec0d526201886df755f5"
+    },
+    "adaptive_smc_seed0": {
+      "file": "td3_adaptive_smc_final_seed0.zip",
+      "sha256": "1dc8dcb96acac5ed7df32a6726fe4c424ae318a4b699a976c58bebc9468dc429"
+    },
+    "adaptive_smc_seed1": {
+      "file": "td3_adaptive_smc_final_seed1.zip",
+      "sha256": "eece38fca822dc47671d1dc6c5e7a50dab350fd6a04ef70c6123278e67866a2f"
+    },
+    "adaptive_smc_seed2": {
+      "file": "td3_adaptive_smc_final_seed2.zip",
+      "sha256": "4dc0a9f19df7e7b2cc13465aab17708bdac766beab409537565ee31a9d10f51e"
+    }
+  },
+  "baselines": {
+    "pid": [
+      0.0049154,
+      6.6994,
+      2.7364e-05
+    ],
+    "smc": [
+      0.65641,
+      164.74,
+      0.3,
+      0.8
+    ]
+  },
+  "versions": {
+    "stable_baselines3": "2.9.0",
+    "torch": "2.14.1",
+    "numpy": "2.5.3"
+  }
+}

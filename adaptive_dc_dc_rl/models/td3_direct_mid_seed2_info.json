@@ -1,0 +1,217 @@
+{
+  "model": "/Users/reththika_murugadasan/cs/adaptive_dc_dc_rl/models/td3_direct_mid_seed2.zip",
+  "total_timesteps": 50000,
+  "seed": 2,
+  "learning_starts": 5000,
+  "wall_time_s": 80.5,
+  "action_mapping": "a in [-1,1] -> D = 0.05 + (a+1)/2*0.90",
+  "extra_info": {},
+  "env": "BoostConverterEnv",
+  "obs_shape": [
+    5
+  ],
+  "action_shape": [
+    1
+  ],
+  "hyperparameters": {
+    "ENV_CONTROL_STEPS": 4,
+    "ENV_MAX_STEPS": 400,
+    "ENV_VIN_RANGE": [
+      10.0,
+      14.0
+    ],
+    "ENV_R_RANGE": [
+      10.0,
+      30.0
+    ],
+    "ENV_VREF_RANGE": [
+      20.0,
+      28.0
+    ],
+    "ENV_COMPONENT_TOL": 0.0,
+    "ENV_DISTURBANCE_PROB": 0.5,
+    "ENV_DISTURBANCE_WINDOW": [
+      0.25,
+      0.6
+    ],
+    "ENV_DISTURBANCE_KINDS": [
+      "vin",
+      "load",
+      "both"
+    ],
+    "ENV_DISTURBANCE_VIN_DELTA": [
+      1.0,
+      4.0
+    ],
+    "ENV_DISTURBANCE_LOAD_RATIO": [
+      0.5,
+      2.0
+    ],
+    "ENV_DISTURBANCE_VREF_DELTA": [
+      1.0,
+      4.0
+    ],
+    "ENV_INIT_PROBS": {
+      "cold": 0.25,
+      "precharged": 0.25,
+      "equilibrium": 0.5
+    },
+    "ENV_E_SCALE": 10.0,
+    "ENV_DE_SCALE": 1.0,
+    "ENV_INT_SCALE": 0.1,
+    "ENV_INT_CLIP": 0.2,
+    "ENV_V_SCALE": 24.0,
+    "ENV_I_SCALE": 10.0,
+    "ENV_OBS_CLIP": 5.0,
+    "ENV_V_MAX": 60.0,
+    "ENV_I_MAX": 30.0,
+    "ENV_REWARD": {
+      "w_lin": 0.5,
+      "w_sqrt": 0.5,
+      "w_over": 0.5,
+      "w_duty": 0.05,
+      "duty_scale": 0.05,
+      "w_de": 0.05,
+      "w_cur": 1.0,
+      "i_soft": 12.0,
+      "w_prec": 0.5,
+      "prec_sigma": [
+        0.5,
+        0.1
+      ],
+      "alive": 1.0,
+      "fail_penalty": 50.0
+    },
+    "TD3_MODEL_NAME": "td3_boost",
+    "TD3_TOTAL_TIMESTEPS": 200000,
+    "TD3_SEED": 0,
+    "TD3_NET_ARCH": [
+      64,
+      64
+    ],
+    "TD3_LEARNING_RATE": 0.001,
+    "TD3_BUFFER_SIZE": 200000,
+    "TD3_BATCH_SIZE": 256,
+    "TD3_GAMMA": 0.99,
+    "TD3_TAU": 0.005,
+    "TD3_POLICY_DELAY": 2,
+    "TD3_TARGET_POLICY_NOISE": 0.2,
+    "TD3_TARGET_NOISE_CLIP": 0.5,
+    "TD3_EXPLORATION_SIGMA": 0.1,
+    "TD3_LEARNING_STARTS": 5000,
+    "TD3_TRAIN_FREQ": 1,
+    "TD3_GRADIENT_STEPS": 1,
+    "TD3_LOG_EPISODES": 20
+  },
+  "versions": {
+    "stable_baselines3": "2.9.0",
+    "torch": "2.14.1",
+    "numpy": "2.5.3"
+  },
+  "reward_history": [
+    {
+      "timesteps": 7159,
+      "episodes": 20,
+      "return_mean": 10.248513943609925,
+      "return_std": 116.81022440878994,
+      "return_min": -167.34238235393389,
+      "return_max": 248.90159273818526,
+      "length_mean": 357.95,
+      "failures_total": 3,
+      "err": -208.76771245373257,
+      "over": -56.77742625859054,
+      "duty": -68.44329630502719,
+      "de": -8.635948700719226,
+      "cur": -2.989420644607801,
+      "prec": 5.562318306287206,
+      "alive": 357.8
+    },
+    {
+      "timesteps": 15159,
+      "episodes": 40,
+      "return_mean": 321.2797465679062,
+      "return_std": 91.46868724623783,
+      "return_min": 117.73580612074659,
+      "return_max": 478.5596798462258,
+      "length_mean": 400.0,
+      "failures_total": 3,
+      "err": -95.21920604925779,
+      "over": -3.6280689300028586,
+      "duty": -14.331863280870522,
+      "de": -2.4011422583859927,
+      "cur": 0.0,
+      "prec": 36.860027086423344,
+      "alive": 400.0
+    },
+    {
+      "timesteps": 23159,
+      "episodes": 60,
+      "return_mean": 392.69998960538953,
+      "return_std": 54.36504508761222,
+      "return_min": 280.68629699820127,
+      "return_max": 487.86629152768546,
+      "length_mean": 400.0,
+      "failures_total": 3,
+      "err": -53.570096544248486,
+      "over": -0.9477855814627704,
+      "duty": -16.05820096117749,
+      "de": -2.0202706587946504,
+      "cur": 0.0,
+      "prec": 65.29634335107286,
+      "alive": 400.0
+    },
+    {
+      "timesteps": 31159,
+      "episodes": 80,
+      "return_mean": 396.53071344130893,
+      "return_std": 64.49506309665433,
+      "return_min": 259.87168372071585,
+      "return_max": 508.3195826791113,
+      "length_mean": 400.0,
+      "failures_total": 3,
+      "err": -49.12311949662693,
+      "over": -2.0238425246935403,
+      "duty": -24.58411020904992,
+      "de": -2.6458264215241085,
+      "cur": 0.0,
+      "prec": 74.9076120932036,
+      "alive": 400.0
+    },
+    {
+      "timesteps": 39159,
+      "episodes": 100,
+      "return_mean": 415.32417390668604,
+      "return_std": 51.75198043355681,
+      "return_min": 301.0002590595765,
+      "return_max": 501.7075458158645,
+      "length_mean": 400.0,
+      "failures_total": 3,
+      "err": -41.02495055845493,
+      "over": -1.2704577609879943,
+      "duty": -28.83672268351764,
+      "de": -2.519844336901687,
+      "cur": 0.0,
+      "prec": 88.97614924654829,
+      "alive": 400.0
+    },
+    {
+      "timesteps": 47159,
+      "episodes": 120,
+      "return_mean": 403.05662673812316,
+      "return_std": 60.974502719540745,
+      "return_min": 298.70378942331286,
+      "return_max": 514.5586886575755,
+      "length_mean": 400.0,
+      "failures_total": 3,
+      "err": -45.842477417588626,
+      "over": -1.1687717826096544,
+      "duty": -29.625759621226564,
+      "de": -3.1759082301932104,
+      "cur": 0.0,
+      "prec": 82.86954378974114,
+      "alive": 400.0
+    }
+  ],
+  "episodes": 127,
+  "trips": 3
+}

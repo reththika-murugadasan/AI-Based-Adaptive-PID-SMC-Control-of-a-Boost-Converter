@@ -1,0 +1,73 @@
+{
+  "tag": "mid",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "t_dist": 0.15,
+  "t_end": 0.3,
+  "scenarios": [
+    "nominal",
+    "vin_12_to_10",
+    "vin_12_to_14",
+    "load_20_to_10",
+    "load_20_to_30"
+  ],
+  "models": {
+    "direct_td3_seed0": {
+      "file": "td3_direct_mid_seed0.zip",
+      "sha256": "0e8f08d626255fd2a365acb6f4c78b6750d662ddf418c0e9a53531ac3a8c7dd8"
+    },
+    "direct_td3_seed1": {
+      "file": "td3_direct_mid_seed1.zip",
+      "sha256": "a3fbe8d87a3269c0f00c3f63742a9f65f941e35e265c849ef67af3d706d96ecc"
+    },
+    "direct_td3_seed2": {
+      "file": "td3_direct_mid_seed2.zip",
+      "sha256": "c50b04115753bd5ae2a309904a74d76a7c73db5c984821bd50e9ff1cef7a3882"
+    },
+    "adaptive_pid_seed0": {
+      "file": "td3_adaptive_pid_mid_seed0.zip",
+      "sha256": "97eb523c027a4d4d528177416de198f348744f5d851a4c67ab838c0d679c56d1"
+    },
+    "adaptive_pid_seed1": {
+      "file": "td3_adaptive_pid_mid_seed1.zip",
+      "sha256": "c411e43bf6cb1e2190c82aedce68d85d21d07547b4a4b06f22137b4d2ab7d9cc"
+    },
+    "adaptive_pid_seed2": {
+      "file": "td3_adaptive_pid_mid_seed2.zip",
+      "sha256": "8367c6f397a94f091ae2508291c2562789fb113c5bc996572dc66a72ce01ab7a"
+    },
+    "adaptive_smc_seed0": {
+      "file": "td3_adaptive_smc_mid_seed0.zip",
+      "sha256": "4719c339ab534dbee1a5da0165a7cf023c94f18397b22d796ccaece37496a8d9"
+    },
+    "adaptive_smc_seed1": {
+      "file": "td3_adaptive_smc_mid_seed1.zip",
+      "sha256": "2d453c9a549edd541b383764f9d4c1c838cb812ab2c22db358363dfe2c7be104"
+    },
+    "adaptive_smc_seed2": {
+      "file": "td3_adaptive_smc_mid_seed2.zip",
+      "sha256": "aa3b12b871305d6206c0b4290cfeef3e3040050e4fe3f2098049e324563412bf"
+    }
+  },
+  "baselines": {
+    "pid": [
+      0.0049154,
+      6.6994,
+      2.7364e-05
+    ],
+    "smc": [
+      0.65641,
+      164.74,
+      0.3,
+      0.8
+    ]
+  },
+  "versions": {
+    "stable_baselines3": "2.9.0",
+    "torch": "2.14.1",
+    "numpy": "2.5.3"
+  }
+}

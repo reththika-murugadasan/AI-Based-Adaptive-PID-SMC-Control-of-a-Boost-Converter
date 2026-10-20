@@ -1,0 +1,277 @@
+{
+  "model": "/Users/reththika_murugadasan/cs/adaptive_dc_dc_rl/models/td3_adaptive_pid_mid_seed1.zip",
+  "total_timesteps": 50000,
+  "seed": 1,
+  "learning_starts": 5000,
+  "wall_time_s": 84.9,
+  "action_mapping": "see extra_info",
+  "extra_info": {
+    "ADAPT_CERTIFIED_FACTORS": {
+      "Kp": [
+        0.7,
+        1.5
+      ],
+      "Ki": [
+        0.7,
+        1.05
+      ],
+      "Kd": [
+        0.9,
+        1.2
+      ]
+    },
+    "ADAPT_RANGE_FACTORS": {
+      "Kp": [
+        0.7,
+        1.5
+      ],
+      "Ki": [
+        0.7,
+        1.05
+      ],
+      "Kd": [
+        0.9,
+        1.2
+      ]
+    },
+    "ADAPT_KP_RANGE": [
+      0.00344078,
+      0.0073731000000000005
+    ],
+    "ADAPT_KI_RANGE": [
+      4.689579999999999,
+      7.03437
+    ],
+    "ADAPT_KD_RANGE": [
+      2.46276e-05,
+      3.28368e-05
+    ],
+    "ADAPT_SMOOTH_ALPHA": 0.1,
+    "ADAPT_RATE_LIMIT": 0.05,
+    "ADAPT_W_GAIN": 0.02,
+    "ADAPT_RECOVERY_ENABLED": true,
+    "ADAPT_REC_ERR_THR": 2.5,
+    "ADAPT_REC_ERR_TAU": 0.002,
+    "ADAPT_REC_PERSIST": 0.008,
+    "ADAPT_REC_IL_WARN": 12.0,
+    "ADAPT_REC_V_WARN_RATIO": 1.15,
+    "ADAPT_REC_MIN_HOLD": 0.005,
+    "ADAPT_REC_RELEASE_THR": 1.0,
+    "ADAPT_REC_RELEASE_HOLD": 0.005,
+    "ADAPT_MODEL_NAME": "td3_adaptive_pid"
+  },
+  "env": "AdaptivePIDEnv",
+  "obs_shape": [
+    10
+  ],
+  "action_shape": [
+    3
+  ],
+  "hyperparameters": {
+    "ENV_CONTROL_STEPS": 4,
+    "ENV_MAX_STEPS": 400,
+    "ENV_VIN_RANGE": [
+      10.0,
+      14.0
+    ],
+    "ENV_R_RANGE": [
+      10.0,
+      30.0
+    ],
+    "ENV_VREF_RANGE": [
+      20.0,
+      28.0
+    ],
+    "ENV_COMPONENT_TOL": 0.0,
+    "ENV_DISTURBANCE_PROB": 0.5,
+    "ENV_DISTURBANCE_WINDOW": [
+      0.25,
+      0.6
+    ],
+    "ENV_DISTURBANCE_KINDS": [
+      "vin",
+      "load",
+      "both"
+    ],
+    "ENV_DISTURBANCE_VIN_DELTA": [
+      1.0,
+      4.0
+    ],
+    "ENV_DISTURBANCE_LOAD_RATIO": [
+      0.5,
+      2.0
+    ],
+    "ENV_DISTURBANCE_VREF_DELTA": [
+      1.0,
+      4.0
+    ],
+    "ENV_INIT_PROBS": {
+      "cold": 0.25,
+      "precharged": 0.25,
+      "equilibrium": 0.5
+    },
+    "ENV_E_SCALE": 10.0,
+    "ENV_DE_SCALE": 1.0,
+    "ENV_INT_SCALE": 0.1,
+    "ENV_INT_CLIP": 0.2,
+    "ENV_V_SCALE": 24.0,
+    "ENV_I_SCALE": 10.0,
+    "ENV_OBS_CLIP": 5.0,
+    "ENV_V_MAX": 60.0,
+    "ENV_I_MAX": 30.0,
+    "ENV_REWARD": {
+      "w_lin": 0.5,
+      "w_sqrt": 0.5,
+      "w_over": 0.5,
+      "w_duty": 0.05,
+      "duty_scale": 0.05,
+      "w_de": 0.05,
+      "w_cur": 1.0,
+      "i_soft": 12.0,
+      "w_prec": 0.5,
+      "prec_sigma": [
+        0.5,
+        0.1
+      ],
+      "alive": 1.0,
+      "fail_penalty": 50.0
+    },
+    "TD3_MODEL_NAME": "td3_boost",
+    "TD3_TOTAL_TIMESTEPS": 200000,
+    "TD3_SEED": 0,
+    "TD3_NET_ARCH": [
+      64,
+      64
+    ],
+    "TD3_LEARNING_RATE": 0.001,
+    "TD3_BUFFER_SIZE": 200000,
+    "TD3_BATCH_SIZE": 256,
+    "TD3_GAMMA": 0.99,
+    "TD3_TAU": 0.005,
+    "TD3_POLICY_DELAY": 2,
+    "TD3_TARGET_POLICY_NOISE": 0.2,
+    "TD3_TARGET_NOISE_CLIP": 0.5,
+    "TD3_EXPLORATION_SIGMA": 0.1,
+    "TD3_LEARNING_STARTS": 5000,
+    "TD3_TRAIN_FREQ": 1,
+    "TD3_GRADIENT_STEPS": 1,
+    "TD3_LOG_EPISODES": 20
+  },
+  "versions": {
+    "stable_baselines3": "2.9.0",
+    "torch": "2.14.1",
+    "numpy": "2.5.3"
+  },
+  "reward_history": [
+    {
+      "timesteps": 8000,
+      "episodes": 20,
+      "return_mean": 487.7538446626725,
+      "return_std": 26.872234013587143,
+      "return_min": 443.26845983381224,
+      "return_max": 539.5869972544087,
+      "length_mean": 400.0,
+      "failures_total": 0,
+      "err": -49.35033316678116,
+      "over": -1.1502320367303454,
+      "duty": -0.44238699430793493,
+      "de": -1.118315717952108,
+      "cur": 0.0,
+      "prec": 142.79793196765604,
+      "alive": 400.0,
+      "gain": -2.9828193892120507
+    },
+    {
+      "timesteps": 16000,
+      "episodes": 40,
+      "return_mean": 473.29243605523,
+      "return_std": 30.677073803073988,
+      "return_min": 423.8304710306016,
+      "return_max": 514.1897092852599,
+      "length_mean": 400.0,
+      "failures_total": 0,
+      "err": -53.44892894776126,
+      "over": -1.5142961226289184,
+      "duty": -0.4304404418030911,
+      "de": -1.2732449017669831,
+      "cur": 0.0,
+      "prec": 135.90123140766295,
+      "alive": 400.0,
+      "gain": -5.941884938472623
+    },
+    {
+      "timesteps": 24000,
+      "episodes": 60,
+      "return_mean": 489.2567866922629,
+      "return_std": 24.24317552192336,
+      "return_min": 429.67995559935065,
+      "return_max": 518.4937138477075,
+      "length_mean": 400.0,
+      "failures_total": 0,
+      "err": -49.135546751904045,
+      "over": -1.0905622021771486,
+      "duty": -0.41508665292261987,
+      "de": -0.9582719243886931,
+      "cur": 0.0,
+      "prec": 144.58510818341946,
+      "alive": 400.0,
+      "gain": -3.7288539597639483
+    },
+    {
+      "timesteps": 32000,
+      "episodes": 80,
+      "return_mean": 481.556688552046,
+      "return_std": 29.12391387885383,
+      "return_min": 424.32064113109413,
+      "return_max": 518.8371437223891,
+      "length_mean": 400.0,
+      "failures_total": 0,
+      "err": -53.93143209152085,
+      "over": -1.1896798688000743,
+      "duty": -0.4656763826312583,
+      "de": -1.2014277059107936,
+      "cur": 0.0,
+      "prec": 141.87477002772408,
+      "alive": 400.0,
+      "gain": -3.5298654268150855
+    },
+    {
+      "timesteps": 40000,
+      "episodes": 100,
+      "return_mean": 476.20732716270396,
+      "return_std": 26.09523775057176,
+      "return_min": 432.4042603534539,
+      "return_max": 530.688242670711,
+      "length_mean": 400.0,
+      "failures_total": 0,
+      "err": -54.9171795940765,
+      "over": -1.5422496154543504,
+      "duty": -0.4219446199089233,
+      "de": -1.0800249568151874,
+      "cur": 0.0,
+      "prec": 137.72940011095687,
+      "alive": 400.0,
+      "gain": -3.5606741619978473
+    },
+    {
+      "timesteps": 48000,
+      "episodes": 120,
+      "return_mean": 470.8996144854118,
+      "return_std": 31.622300119943517,
+      "return_min": 411.15525398381146,
+      "return_max": 523.8266820899719,
+      "length_mean": 400.0,
+      "failures_total": 0,
+      "err": -58.050685305335,
+      "over": -0.9306860128604789,
+      "duty": -0.4783926447816539,
+      "de": -1.2122084711141805,
+      "cur": 0.0,
+      "prec": 135.7304144153223,
+      "alive": 400.0,
+      "gain": -4.158827495819365
+    }
+  ],
+  "episodes": 125,
+  "trips": 0
+}

@@ -1,0 +1,277 @@
+{
+  "model": "/Users/reththika_murugadasan/cs/adaptive_dc_dc_rl/models/td3_adaptive_smc_mid_seed0.zip",
+  "total_timesteps": 50000,
+  "seed": 0,
+  "learning_starts": 5000,
+  "wall_time_s": 91.5,
+  "action_mapping": "see extra_info",
+  "extra_info": {
+    "ASMC_CERTIFIED_FACTORS": {
+      "Kv": [
+        0.8,
+        1.25
+      ],
+      "Ki": [
+        0.8,
+        1.25
+      ],
+      "K": [
+        0.9,
+        1.1
+      ],
+      "phi": [
+        0.85,
+        1.25
+      ]
+    },
+    "ASMC_RANGE_FACTORS": {
+      "Kv": [
+        0.8,
+        1.25
+      ],
+      "Ki": [
+        0.8,
+        1.25
+      ],
+      "K": [
+        0.9,
+        1.1
+      ],
+      "phi": [
+        0.9,
+        1.15
+      ]
+    },
+    "ASMC_MAX_RATIO_FACTOR": 1.2,
+    "ASMC_SMOOTH_ALPHA": 0.1,
+    "ASMC_RATE_LIMIT": 0.05,
+    "ASMC_W_PARAM": 0.02,
+    "ASMC_RECOVERY_ENABLED": true,
+    "ASMC_REC_ERR_THR": 2.5,
+    "ASMC_REC_ERR_TAU": 0.002,
+    "ASMC_REC_PERSIST": 0.008,
+    "ASMC_REC_IL_WARN": 12.0,
+    "ASMC_REC_V_WARN_RATIO": 1.15,
+    "ASMC_REC_CHATTER_THR": 0.004,
+    "ASMC_REC_CHATTER_TAU": 0.001,
+    "ASMC_REC_CHATTER_PERSIST": 0.01,
+    "ASMC_REC_MIN_HOLD": 0.005,
+    "ASMC_REC_RELEASE_THR": 1.0,
+    "ASMC_REC_RELEASE_HOLD": 0.005,
+    "ASMC_MODEL_NAME": "td3_adaptive_smc"
+  },
+  "env": "AdaptiveSMCEnv",
+  "obs_shape": [
+    11
+  ],
+  "action_shape": [
+    4
+  ],
+  "hyperparameters": {
+    "ENV_CONTROL_STEPS": 4,
+    "ENV_MAX_STEPS": 400,
+    "ENV_VIN_RANGE": [
+      10.0,
+      14.0
+    ],
+    "ENV_R_RANGE": [
+      10.0,
+      30.0
+    ],
+    "ENV_VREF_RANGE": [
+      20.0,
+      28.0
+    ],
+    "ENV_COMPONENT_TOL": 0.0,
+    "ENV_DISTURBANCE_PROB": 0.5,
+    "ENV_DISTURBANCE_WINDOW": [
+      0.25,
+      0.6
+    ],
+    "ENV_DISTURBANCE_KINDS": [
+      "vin",
+      "load",
+      "both"
+    ],
+    "ENV_DISTURBANCE_VIN_DELTA": [
+      1.0,
+      4.0
+    ],
+    "ENV_DISTURBANCE_LOAD_RATIO": [
+      0.5,
+      2.0
+    ],
+    "ENV_DISTURBANCE_VREF_DELTA": [
+      1.0,
+      4.0
+    ],
+    "ENV_INIT_PROBS": {
+      "cold": 0.25,
+      "precharged": 0.25,
+      "equilibrium": 0.5
+    },
+    "ENV_E_SCALE": 10.0,
+    "ENV_DE_SCALE": 1.0,
+    "ENV_INT_SCALE": 0.1,
+    "ENV_INT_CLIP": 0.2,
+    "ENV_V_SCALE": 24.0,
+    "ENV_I_SCALE": 10.0,
+    "ENV_OBS_CLIP": 5.0,
+    "ENV_V_MAX": 60.0,
+    "ENV_I_MAX": 30.0,
+    "ENV_REWARD": {
+      "w_lin": 0.5,
+      "w_sqrt": 0.5,
+      "w_over": 0.5,
+      "w_duty": 0.05,
+      "duty_scale": 0.05,
+      "w_de": 0.05,
+      "w_cur": 1.0,
+      "i_soft": 12.0,
+      "w_prec": 0.5,
+      "prec_sigma": [
+        0.5,
+        0.1
+      ],
+      "alive": 1.0,
+      "fail_penalty": 50.0
+    },
+    "TD3_MODEL_NAME": "td3_boost",
+    "TD3_TOTAL_TIMESTEPS": 200000,
+    "TD3_SEED": 0,
+    "TD3_NET_ARCH": [
+      64,
+      64
+    ],
+    "TD3_LEARNING_RATE": 0.001,
+    "TD3_BUFFER_SIZE": 200000,
+    "TD3_BATCH_SIZE": 256,
+    "TD3_GAMMA": 0.99,
+    "TD3_TAU": 0.005,
+    "TD3_POLICY_DELAY": 2,
+    "TD3_TARGET_POLICY_NOISE": 0.2,
+    "TD3_TARGET_NOISE_CLIP": 0.5,
+    "TD3_EXPLORATION_SIGMA": 0.1,
+    "TD3_LEARNING_STARTS": 5000,
+    "TD3_TRAIN_FREQ": 1,
+    "TD3_GRADIENT_STEPS": 1,
+    "TD3_LOG_EPISODES": 20
+  },
+  "versions": {
+    "stable_baselines3": "2.9.0",
+    "torch": "2.14.1",
+    "numpy": "2.5.3"
+  },
+  "reward_history": [
+    {
+      "timesteps": 8000,
+      "episodes": 20,
+      "return_mean": 535.0683757946622,
+      "return_std": 19.502316121530452,
+      "return_min": 498.9756876686356,
+      "return_max": 569.3065981977373,
+      "length_mean": 400.0,
+      "failures_total": 0,
+      "err": -23.34638725220556,
+      "over": -1.5355938694485889,
+      "duty": -0.5702455296569797,
+      "de": -0.7645896308388448,
+      "cur": 0.0,
+      "prec": 164.38694400546154,
+      "alive": 400.0,
+      "param": -3.1017519286495956
+    },
+    {
+      "timesteps": 16000,
+      "episodes": 40,
+      "return_mean": 533.8828681688371,
+      "return_std": 19.85435058916826,
+      "return_min": 501.5763376561199,
+      "return_max": 566.392438281195,
+      "length_mean": 400.0,
+      "failures_total": 0,
+      "err": -21.061834490923868,
+      "over": -0.344422624659363,
+      "duty": -0.5700180275136294,
+      "de": -0.5037712400782278,
+      "cur": 0.0,
+      "prec": 162.97096775505992,
+      "alive": 400.0,
+      "param": -6.608053203047686
+    },
+    {
+      "timesteps": 24000,
+      "episodes": 60,
+      "return_mean": 527.5310637825129,
+      "return_std": 30.93773040682964,
+      "return_min": 437.18465146120604,
+      "return_max": 576.0772705748855,
+      "length_mean": 400.0,
+      "failures_total": 0,
+      "err": -24.53266513666345,
+      "over": -0.6747427606109638,
+      "duty": -0.7350875123566688,
+      "de": -0.800881841789207,
+      "cur": 0.0,
+      "prec": 159.95614065219738,
+      "alive": 400.0,
+      "param": -5.681699618264218
+    },
+    {
+      "timesteps": 32000,
+      "episodes": 80,
+      "return_mean": 528.5788444215857,
+      "return_std": 24.95182253310853,
+      "return_min": 470.0838856412106,
+      "return_max": 573.661968017684,
+      "length_mean": 400.0,
+      "failures_total": 0,
+      "err": -21.997721823052927,
+      "over": -0.3255871608528131,
+      "duty": -0.5237956269711961,
+      "de": -0.5899617798945889,
+      "cur": 0.0,
+      "prec": 157.3689138017279,
+      "alive": 400.0,
+      "param": -5.353002989370786
+    },
+    {
+      "timesteps": 40000,
+      "episodes": 100,
+      "return_mean": 526.0739271665217,
+      "return_std": 19.440178763999217,
+      "return_min": 492.61283970651704,
+      "return_max": 559.3911030258033,
+      "length_mean": 400.0,
+      "failures_total": 0,
+      "err": -23.27302707945603,
+      "over": -0.6802858695044364,
+      "duty": -0.49258932803538996,
+      "de": -0.43062589342704893,
+      "cur": 0.0,
+      "prec": 155.6184166850676,
+      "alive": 400.0,
+      "param": -4.6679613481231925
+    },
+    {
+      "timesteps": 48000,
+      "episodes": 120,
+      "return_mean": 529.8180709741996,
+      "return_std": 19.981260239386906,
+      "return_min": 493.9563435325583,
+      "return_max": 561.3580296210894,
+      "length_mean": 400.0,
+      "failures_total": 0,
+      "err": -24.447667022293786,
+      "over": -0.9661525501478069,
+      "duty": -0.6482914470079953,
+      "de": -0.6376639087081389,
+      "cur": 0.0,
+      "prec": 161.11822882469548,
+      "alive": 400.0,
+      "param": -4.600382922338065
+    }
+  ],
+  "episodes": 125,
+  "trips": 0
+}
